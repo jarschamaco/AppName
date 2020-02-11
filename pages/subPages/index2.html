@@ -1,0 +1,37 @@
+<?php
+
+  session_start(); /* Starts the session */
+
+  if($_SESSION['Active'] == false){ /* Redirects user to Login.php if not logged in */
+    header("location: ../../pages/subPages/login.html"); 
+    exit;
+  }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Inicio</title>
+  <?php require_once "scripts.php"; ?>
+</head>
+<body>
+<br><br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="jumbotron">
+        <a href="../../DataBase/Process/logout.php" class="btn btn-info">Salir del sistema</a>
+          <h2>Entraste con exito</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<?php
+} else {
+  header("location: login.html");
+  }
+ ?>
