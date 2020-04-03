@@ -135,6 +135,11 @@ session_start();
             type: 'error',
             title: ' Crendiales erroneas, reviselas'
           })
+        }else if (response == 3) {
+          Toast.fire({
+            type: 'error',
+            title: ' Estas crendiales no existen en el sistema, reviselas'
+          })
         }else if (response == 0){
           Toast.fire({
             type: 'error',
