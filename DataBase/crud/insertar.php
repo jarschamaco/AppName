@@ -12,7 +12,12 @@
     $contact= $_POST['contact'];
     $ubication= $_POST['ubication'];
 
-    $query = "INSERT INTO user_table (email, name, password, rango, contacto, direccion) values ('$email','$name','$password', '$cargo', '$contact', '$ubication');";
-	pg_query($conexion,$query);
+    $query = "INSERT INTO user_table (email, name, password, rango, contacto, direccion) values ('$email','$name','$password','$cargo','$contact','$ubication');";
+	$result = pg_query($conexion,$query);
+
+    if (!$result) {
+      echo "Ocurrió un error.\n";
+      exit;
+    }
 
  ?>

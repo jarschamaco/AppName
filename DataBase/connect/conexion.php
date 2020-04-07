@@ -2,7 +2,7 @@
 	function conexionBD(){
 		try {
 			//conectamos con el servidor
-			$conectar= pg_connect("host='localhost' port=5432 dbname=postgres user=postgres password=1234");
+			$conectar= pg_connect("host='localhost' port=5432 dbname=postgres user=postgres password=postgres");
 			if (!$conectar) {
 				echo "Error: ".pg_last_error();
 			}else{

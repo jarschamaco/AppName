@@ -1,7 +1,5 @@
 <?php
 require_once ('../config.php'); // For storing username and password.
-
-session_start();
 ?>
 
 <!-- HTML code for Bootstrap framework and form design -->

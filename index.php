@@ -350,10 +350,6 @@
   window.onhashchange=function(){window.location.hash="no-back-button";}
 
   $(document).ready(  function(){
-
-    $(".id_colum").toggle();
-    $('td:nth-child(1)').toggle();
-
     const Toast = Swal.mixin({
       toast: true,
       position: 'top-end',
@@ -373,7 +369,7 @@
 
       $.post('DataBase/crud/insertar.php', postData, function(response){
         console.log(response);
-        window.location="index.php";
+        $( "#table-show-user" ).load( "index.php #table-show-user" );
       });
     })
 
@@ -386,9 +382,6 @@
         console.log(response);
         $( "#table-show-user" ).load( "index.php #table-show-user" );
       });
-
-      $(".id_colum").toggle();
-      $('td:nth-child(1)').toggle();
       
     });
   });
